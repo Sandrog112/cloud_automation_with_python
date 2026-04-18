@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "aws-s3-bucket-cli"
+version = "0.1.0"
+description = "Robust CLI tool for AWS S3 bucket management"
+authors = ["BTU Student <student@example.com>"]
+readme = "README.md"
+packages = [{ include = "s3_cli" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+boto3 = "^1.42.91"
+python-dotenv = "^1.1.1"
+filetype = "^1.2.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.0"
+ruff = "^0.12.0"
+
+[tool.poetry.scripts]
+s3cli = "s3_cli.cli:main"
+
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"
